@@ -30,7 +30,7 @@ from .widget import (
     WechatDialog
 )
 from ..engine import MainEngine, BaseApp, EmailEngine
-from ..utility import get_icon_path, TRADER_DIR
+from ..utility import get_icon_path
 from ..locale import _
 
 
@@ -49,7 +49,7 @@ class MainWindow(QtWidgets.QMainWindow):
         self.main_engine: MainEngine = main_engine
         self.event_engine: EventEngine = event_engine
 
-        self.window_title: str = _("VeighNa Trader 社区版 - {}   [{}]").format(vnpy.__version__, TRADER_DIR)
+        self.window_title: str = _("VeighNa Trader 社区版 - {}").format(vnpy.__version__)
 
         self.widgets: dict[str, QtWidgets.QWidget] = {}
         self.monitors: dict[str, BaseMonitor] = {}
