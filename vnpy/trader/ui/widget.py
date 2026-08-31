@@ -1288,6 +1288,8 @@ class GlobalDialog(QtWidgets.QDialog):
                     field_value: bool = True
                 else:
                     field_value = False
+            elif not value_text and field_type in {int, float}:
+                field_value = field_type()
             else:
                 field_value = field_type(value_text)
 
